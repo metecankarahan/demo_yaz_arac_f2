@@ -2,5 +2,7 @@ language:java
 script:
   - "mvn -f finalDers/pom.xml clean install cobertura:cobertura"
 jdk:
-  - oraclejdk8
+  - openjdk8
+after success:
+  - bash(curl -s https://codecov.io/bash)
   
